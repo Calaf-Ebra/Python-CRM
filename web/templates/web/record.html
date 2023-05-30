@@ -1,0 +1,63 @@
+{% extends 'web/base.html' %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+
+    {{ cus_records.first_name }}
+    {{cus_records.last_name}}
+
+    </div>
+
+
+    <div class="card">
+        <div class="card-header"><strong>
+              {{ cus_records.first_name }} 
+              {{ cus_records.last_name }}</strong>
+        </div>
+        <div class="card-body">
+      
+      
+      
+      <p class="card-text">
+      <strong>Email: </strong>{{ cus_records.email }}</p>
+      
+      <p class="card-text">
+      <strong>Phone: </strong>{{ cus_records.phone }}
+      </p>
+      
+      <p class="card-text">
+      <strong>Address: </strong>{{ cus_records.address }}</p>
+      
+      <p class="card-text">
+      <strong>City: </strong>{{ cus_records.city }}</p>
+      
+      <p class="card-text">
+      <strong>State: </strong>{{ cus_records.state }}</p>
+      
+      <p class="card-text">
+      <strong>Zipcode: </strong>{{ cus_records.zipcode }}</p>
+      
+      <p class="card-text">
+      <strong>Create At: </strong>{{ cus_records.created_at }}</p>
+      
+      <p class="card-text">
+      <strong>ID: </strong>{{ cus_records.id }}</p>
+          
+          
+        </div>
+      </div>
+
+
+      
+<br/><br/>
+
+
+<a href =" {%  url 'update_record' cus_records.id %}" class = "btn btn-secondary">Update Record</a>
+<a href =" {%  url 'delete_record' cus_records.id %}" class = "btn btn-danger">Delete</a>
+<a href =" {%  url 'home' %}" class = "btn btn-secondary">Back</a>
+
+        
+
+{% endblock %}
